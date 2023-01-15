@@ -1,41 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traceroute</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <script src="https://kit.fontawesome.com/5548f5ed00.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script
+      src="https://kit.fontawesome.com/5548f5ed00.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
-</head>
+  </head>
 
-<body>
-  
+  <body>
+    <!-- Just an image -->
+    <nav class="navbar">
+      <a class="navbar-brand" href="#">
+        <img src="Traceroute.png" alt="Traceroute" />
+      </a>
+    </nav>
     <div id="container">
-        <div id="mynetwork">
-        </div>
-        <div id="container2">
-            <span id="temptext2" style="width: 100%; text-align: center; font-size: x-large">
-            </span>
-            <span id="temptext" style="width: 100%; text-align: center; font-size: x-large">
-                Yellow link represents bus travel time : <i class="fa fa-bus" aria-hidden="true" style="color: red"></i><br>
-                Green link represents flight travel time : <i class="fa fa-plane" aria-hidden="true" style="color: green"></i><br>
-                Click on solve to get Solution !!
-            </span>
-            <div id="mynetwork2" style="display: none"></div>
-        </div>
+      <div id="mynetwork"></div>
+      <div id="container2">
+        <span
+          id="temptext2"
+          style="
+            width: 100%;
+            text-align: center;
+            font-size: x-large;
+            font-weight: bold;
+          "
+        >
+        </span>
+        <span
+          id="temptext"
+          style="
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+            color: rgb(92, 89, 89);
+          "
+        >
+          Blue link represents bus travel time :
+          <i class="fa fa-bus" aria-hidden="true" style="color: blue"></i><br />
+          Green link represents flight travel time :
+          <i class="fa fa-plane" aria-hidden="true" style="color: green"></i
+          ><br />
+        </span>
+        <div id="mynetwork2" style="display: none"></div>
+      </div>
     </div>
 
     <div id="btns">
-        <br>
-        <button type="button" class="btn btn-primary" id="generate-graph">Get New Problem</button>
-        <button type="button" class="btn btn-success" id="solve">Solve</button>
+      <br />
+      <button
+        type="button"
+        class="btn btn-primary"
+        id="generate-graph"
+        style="background-color: orangered; border: none"
+      >
+        Get New Problem
+      </button>
+      <button
+        type="button"
+        class="btn btn-success"
+        id="solve"
+        style="background-color: orange; border: none"
+      >
+        Solve
+      </button>
     </div>
-</body>
-
+  </body>
 </html>
